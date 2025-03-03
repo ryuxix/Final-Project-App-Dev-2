@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>Log In Page</title>
+     <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+    </head>
+<header>
+    {% include 'core/navbar.html' %}
+</header>
+<h1> Log In!</h1>
+
+<form method="POST" autocomplete="off">
+     {% csrf_token %}
+     
+    {{loginform.as_p}}
+    
+    <input type="submit" value="Login"/>
+
+<p>
+    Don't have an account? <a href="{% url 'signup' %}">Sign Up</a>
+</p>
+</form>
+</html>

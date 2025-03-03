@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for esports theme */
+    color: #ffffff; /* White text for contrast */
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #1c1c1c; /* Slightly lighter dark shade for header */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ff4655; /* Red accent for esports vibe */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff4655; /* Esports red for branding */
+}
+
+/* Navigation Bar */
+/* Navbar Styling */
+.navbar {
+    background-color: #1c1c1c; /* Dark esports theme */
+    padding: 10px 20px;
+    border-bottom: 3px solid #ff4655; /* Esports red accent */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center-align the links */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px; /* Space between each link */
+}
+
+.navbar .nav-links a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar .nav-links a:hover {
+    color: #00ffff; /* Neon cyan hover effect */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #ff4655; /* Red accent for headings */
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+    background-color: #ff4655; /* Esports red */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00ffff; /* Neon cyan hover effect */
+}
+
+/* Card Design (e.g., for player profiles or game details) */
+.card {
+    background-color: #1c1c1c; /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #00ffff; /* Neon cyan for card headings */
+}
+
+.card p {
+    color: #ffffff; /* White text inside cards */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #808080; /* Grey text for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

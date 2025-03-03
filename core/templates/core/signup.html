@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% include 'core/navbar.html' %}
+    <h1>Sign up page</h1>
+
+    <form method="POST" autocomplete="off">
+
+        {% csrf_token %}
+        {{signupform.as_p}}
+
+        <input type="submit" value="Sign Up"/>
+
+    </form>
+
+
+</html>
