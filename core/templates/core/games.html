@@ -1,15 +1,37 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Games </title>
+    <title>Games</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     {% include 'core/navbar.html' %}
     <section class="content">
         <h1>Games</h1>
-        <p>Here are the games that we have rountine for. The ones that are most popluar the Valorant, Fortnite, and CS2</p>
+        <p>Here are the games that we have routine for. The most popular ones are Valorant, Fortnite, and CS2.</p>
+        <div class="game-container">
+            <!-- Image Cards -->
+            <div class="game-card" onclick="showDescription('valorant')">
+                <img src="{% static 'images/valorant.jpg' %}" alt="Valorant">
+                <p id="valorant" class="description">Valorant is a tactical shooter game.</p>
+            </div>
+            <div class="game-card" onclick="showDescription('fortnite')">
+                <img src="{% static 'images/fortnite.jpg' %}" alt="Fortnite">
+                <p id="fortnite" class="description">Fortnite is a battle royale game.</p>
+            </div>
+            <div class="game-card" onclick="showDescription('cs2')">
+                <img src="{% static 'images/cs2.jpg' %}" alt="CS2">
+                <p id="cs2" class="description">CS2 is a first-person shooter game.</p>
+            </div>
+        </div>
     </section>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+
 </body>
 </html>
