@@ -53,3 +53,8 @@ def user_logout(request):
 
     return redirect('/')
 
+def valorant(request):
+    return render(request, 'core/valorant.html')
+
+def cs2(request):
+    return render(request, 'core/cs2.html')
