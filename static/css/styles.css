@@ -147,26 +147,3 @@ footer {
     margin-top: 20px;
 }
 
-/* Individual Game Card Styling */
-.game-card {
-    text-align: center;
-    cursor: pointer;
-}
-
-.game-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.game-card img:hover {
-    transform: scale(1.1);
-}
-
-/* Description Styling */
-.description {
-    display: none; /* Initially hidden */
-    margin-top: 10px;
-    color: #00ffff; /* Neon cyan for esports theme */
-}
