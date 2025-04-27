@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . forms import CreateUserForm, LoginForm
 from django.contrib.auth.models import auth
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout 
 
 def index(request):
@@ -53,8 +54,16 @@ def user_logout(request):
 
     return redirect('/')
 
+@login_required(login_url="login")
+def myscrims(request):
+    return render(request, 'core/myscrims.html')
+
+
 def valorant(request):
     return render(request, 'core/valorant.html')
 
 def cs2(request):
     return render(request, 'core/cs2.html')
+
+def profile(request):
+    return render(request, 'core/profile.html')
