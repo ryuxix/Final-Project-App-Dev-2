@@ -13,4 +13,19 @@
 <a href = "{% url 'user-logout' %}"> Logout Here</a>
 
 
+<div class="routines-container">
+    {% for routine in routines %}
+    <div class="routine-card">
+        <h3>{{ routine.title }}</h3>
+        <p>{{ routine.content|linebreaks }}</p>
+        <div class="actions">
+            <a href="{% url 'edit-routine' routine.pk %}" class="edit-btn">Edit</a>
+            <a href="{% url 'delete-routine' routine.pk %}" class="delete-btn">Delete</a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No saved routines yet.</p>
+    {% endfor %}
+</div>
+
 </html>

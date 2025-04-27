@@ -13,7 +13,7 @@
     {% include 'core/navbar.html' %}
   <header>
     <h1>Valorant Training Routines</h1>
-    <p>Improve your aiming and movement skills with these tailored routines!</p>
+    <p>Improve your aiming and movement skills with these tailored routines! To save routine copy the text before saving it!</p>
   </header>
 
   <main>
@@ -35,6 +35,11 @@
         <h2>Movement</h2>
         <p>Spend 5 minutes in a custom game practicing strafing while shooting at walls or targets. Focus on counter-strafing to stop quickly for accurate shots.</p>
       </div>
+      <form method="post" action="{% url 'create-routine' 'valorant' %}">
+        {% csrf_token %}
+        <input type="hidden" name="game" value="VALORANT">
+        <button type="submit" class="save-button">Save Routine</button>
+    </form>      
     </section>
 
     <!-- Routine 2 -->
@@ -55,6 +60,11 @@
         <h2>Movement</h2>
         <p>Practice bunny hopping and air-strafing in a custom game. Use maps like Icebox or Split to practice skill jumps that provide tactical advantages.</p>
       </div>
+      <form method="post" action="{% url 'create-routine' 'valorant' %}">
+        {% csrf_token %}
+        <input type="hidden" name="game" value="VALORANT">
+        <button type="submit" class="save-button">Save Routine</button>
+    </form>      
     </section>
 
     <!-- Routine 3 -->
@@ -79,6 +89,11 @@
         <h2>Movement</h2>
         <p>Create a custom game to practice jump peeking, parkour routes, and tactical repositioning.</p>
       </div>
+      <form method="post" action="{% url 'create-routine' 'valorant' %}">
+        {% csrf_token %}
+        <input type="hidden" name="game" value="VALORANT">
+        <button type="submit" class="save-button">Save Routine</button>
+    </form>      
     </section>
 
     <!-- Routine 4 -->
@@ -99,6 +114,11 @@
           </ul>
         </ul>
       </div>
+      <form method="post" action="{% url 'create-routine' 'valorant' %}">
+        {% csrf_token %}
+        <input type="hidden" name="game" value="VALORANT">
+        <button type="submit" class="save-button">Save Routine</button>
+    </form>      
     </section>
 
   </main>
