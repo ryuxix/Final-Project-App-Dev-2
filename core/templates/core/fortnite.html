@@ -37,6 +37,11 @@
                 <h2>Movement</h2>
                 <p>Freebuild in Creative for 5 minutes. Practice basic building patterns (90s, ramps, walls) and focus on smooth movement and clean edits.</p>
             </div>
+            <form method="post" action="{% url 'create-routine' 'valorant' %}">
+                {% csrf_token %}
+                <input type="hidden" name="game" value="VALORANT">
+                <button type="submit" class="save-button">Save Routine</button>
+            </form>
         </section>
 
         <!-- Routine 2 -->
@@ -75,6 +80,11 @@
                     </li>
                 </ul>
             </div>
+            <form method="post" action="{% url 'create-routine' 'valorant' %}">
+                {% csrf_token %}
+                <input type="hidden" name="game" value="VALORANT">
+                <button type="submit" class="save-button">Save Routine</button>
+            </form>
         </section>
 
         <!-- Routine 3 -->
@@ -113,6 +123,11 @@
                     </li>
                 </ul>
             </div>
+            <form method="post" action="{% url 'create-routine' 'valorant' %}">
+                {% csrf_token %}
+                <input type="hidden" name="game" value="VALORANT">
+                <button type="submit" class="save-button">Save Routine</button>
+            </form>
         </section>
 
         <!-- Routine 4 -->
@@ -143,6 +158,11 @@
                     </li>
                 </ul>
             </div>
+            <form method="post" action="{% url 'create-routine' 'valorant' %}">
+                {% csrf_token %}
+                <input type="hidden" name="game" value="VALORANT">
+                <button type="submit" class="save-button">Save Routine</button>
+            </form>
         </section>
     </main>
 </body>

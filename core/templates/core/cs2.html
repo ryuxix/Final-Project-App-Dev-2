@@ -39,6 +39,11 @@
         <h3>Movement</h3>
         <p>Spend 5 minutes practicing strafing, counter-strafing, and peeking corners in a custom game. Use walls or bots as targets while practicing movement-based shooting.</p>
       </div>
+      <form method="post" action="{% url 'create-routine' 'valorant' %}">
+        {% csrf_token %}
+        <input type="hidden" name="game" value="VALORANT">
+        <button type="submit" class="save-button">Save Routine</button>
+    </form>
     </section>
 
     <!-- Routine 2 -->
@@ -79,6 +84,11 @@
         </ul>
 
       </div>
+      <form method="post" action="{% url 'create-routine' 'valorant' %}">
+        {% csrf_token %}
+        <input type="hidden" name="game" value="VALORANT">
+        <button type="submit" class="save-button">Save Routine</button>
+    </form>
     </section>
 
     <!-- Routine 3 -->
@@ -114,6 +124,11 @@
         <p>Create a private server to practice advanced grenade lineups. Focus on learning key smokes for retakes and executes on maps like Mirage, Inferno, or Overpass. Spend time practicing pop flashes to blind opponents effectively during pushes.</p>
 
       </div>
+      <form method="post" action="{% url 'create-routine' 'valorant' %}">
+        {% csrf_token %}
+        <input type="hidden" name="game" value="VALORANT">
+        <button type="submit" class="save-button">Save Routine</button>
+    </form>
     </section>
 
     <!-- Routine 4 -->
@@ -144,6 +159,11 @@
             </ul>
     
           </div>
+          <form method="post" action="{% url 'create-routine' 'valorant' %}">
+            {% csrf_token %}
+            <input type="hidden" name="game" value="VALORANT">
+            <button type="submit" class="save-button">Save Routine</button>
+        </form>
         </section>
     
       </main>
