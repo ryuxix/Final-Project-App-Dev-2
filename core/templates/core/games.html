@@ -15,19 +15,45 @@
         <p>Here are the games that we have routine for. The most popular ones are Valorant, Fortnite, and CS2.</p>
         <div class="game-container">
             <!-- Image Cards -->
-            <div class="game-card" onclick="showDescription('valorant')">
+            <div class="game-card" onclick="showDescription('Valorant', 'Valorant is a free-to-play, team-based first-person tactical hero shooter developed and published by Riot Games. Released in 2020 for Windows and later for PlayStation 5 and Xbox Series X/S, the game draws inspiration from titles like Counter-Strike and Overwatch, blending precise gunplay with unique character abilities in a near-future setting.')">
                 <img src="{% static 'images/valorant.jpg' %}" alt="Valorant">
-                <p id="valorant" class="description">Valorant is a tactical shooter game.</p>
             </div>
-            <div class="game-card" onclick="showDescription('fortnite')">
+            <div class="game-card" onclick="showDescription('Fortnite', 'Fortnite is an online video game and platform developed by Epic Games, first released in 2017. It is best known for its Battle Royale mode, where up to 100 players compete to be the last person or team standing on an ever-shrinking island. Players skydive onto the map from the Battle Bus, scavenge for weapons and resources, and must eliminate opponents while avoiding a deadly storm that gradually reduces the safe play area, forcing encounters between players.')">
                 <img src="{% static 'images/fortnite.jpg' %}" alt="Fortnite">
-                <p id="fortnite" class="description">Fortnite is a battle royale game.</p>
             </div>
-            <div class="game-card" onclick="showDescription('cs2')">
+            <div class="game-card" onclick="showDescription('CS2', 'Counter-Strike 2 (CS2) is a tactical first-person shooter developed by Valve, serving as the latest evolution of the iconic Counter-Strike franchise. Built on the Source 2 engine, CS2 delivers significant technical upgrades, including enhanced graphics, improved lighting, and advanced physics, while preserving the core gameplay that has defined the series for over two decades.')">
                 <img src="{% static 'images/cs2.jpg' %}" alt="CS2">
-                <p id="cs2" class="description">CS2 is a first-person shooter game.</p>
             </div>
         </div>
+        
+        <!-- Modal Structure -->
+        <div id="gameModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+          </div>
+        </div>
+        
     </section>
 </body>
+<script>
+    function showDescription(title, desc) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalDesc').textContent = desc;
+    document.getElementById('gameModal').style.display = 'block';
+  }
+  
+  document.getElementById('closeModal').onclick = function() {
+    document.getElementById('gameModal').style.display = 'none';
+  };
+  
+  window.onclick = function(event) {
+    const modal = document.getElementById('gameModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+  
+</script>
 </html>
